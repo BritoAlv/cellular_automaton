@@ -89,7 +89,7 @@
         CurrentState = new_state;
     }
 
-    private int LocalUpdateState(int current_state, List<int> neighboursStates)
+    private static int LocalUpdateState(int current_state, List<int> neighboursStates)
     {
         if (current_state == -1)
         {
@@ -219,10 +219,9 @@
             for (int j = 0; j < this.gridSize_H; j++)
             {
                 var color = this.colors[this.CurrentState[i][j]];
-                Console.ForegroundColor = color;
-                Console.Write((this.CurrentState[i][j]).ToString().PadLeft(2));
+                Console.BackgroundColor = color;
+                Console.Write($"{this.CurrentState[i][j]}".PadLeft(3));
                 Console.ResetColor();
-                Console.Write(" ");
             }
             Console.WriteLine();
         }
