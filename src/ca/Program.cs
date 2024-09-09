@@ -1,2 +1,2 @@
-CelularAutomaton ca = new CelularAutomaton(10, 10, 3);
+CelularAutomaton ca = new CelularAutomaton(20, 20, 6);
 ca.Step_By_Step_Show();
