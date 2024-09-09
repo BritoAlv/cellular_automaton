@@ -263,17 +263,19 @@ public class CelularAutomaton
                 var lifeness = this.CurrentState[i][j].Ocuppied;
                 var color = this.colors[this.CurrentState[i][j].Team];
                 Console.BackgroundColor = color;
+                int pad_space = 3;
                 if (team == -1)
                 {
-                    Console.Write($"    ".PadLeft(4));
+                    Console.Write("   ");
                 }
                 else if (!lifeness)
                 {
-                    Console.Write(" X ".PadLeft(4));
+                    Console.Write(" X ");
                 }
                 else
                 {
-                    Console.Write($"{team}".PadLeft(4));
+                    string teamString = " " + team.ToString() + " ";
+                    Console.Write(teamString);
                 }
                 Console.ResetColor();
             }
