@@ -1,0 +1,1 @@
+public record PostStartApi(int h, int w, int numberTeams, double p);

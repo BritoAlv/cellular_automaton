@@ -1,0 +1,10 @@
+POST http://localhost:5251/Start/
+Content-Type: application/json
+
+{
+  "h": "40",
+  "w": "40",
+  "numberTeams": "5",
+  "p": "0.6"
+}
+

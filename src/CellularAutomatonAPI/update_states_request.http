@@ -1,0 +1,7 @@
+GET http://localhost:5251/UpdateCurrentState/
+Content-Type: application/json
+
+{
+
+}
+
