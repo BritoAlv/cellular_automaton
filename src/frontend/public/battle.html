@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battlefield</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script type="module" src="../static/scripts/battle.js"></script>
 </head>
 <body>
-    <a href="./index">Home</a>
+    <a href="./index" id="back-button">Home</a>
+    <a href="#" id="next-button">Restart</a>
+
+    <div id="battlefield-container">
+        <div id="players-container">
+            <ul id="players">
+                <!-- <li>Army 1: 45%</li> -->
+            </ul>
+        </div>
+
+        <div id="canvas-container">
+            <canvas id="canvas" width="1500" height="720"></canvas>
+        </div>
+    </div>
 </body>
 </html>

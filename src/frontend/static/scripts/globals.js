@@ -1,1 +1,19 @@
-export const URL = 'http://127.0.0.1:5000/api/get'
+export const URL = 'http://localhost:5251/';
+
+export const COLORS = [
+    'red',
+    'blue',
+    'green',
+    'yellow',
+    'orange',
+    'violet',
+    'white',
+    'magenta',
+    'cyan',
+    'darkred',
+    'darlblue',
+    'darkgreen',
+    'darkmagenta',
+    'darkcyan',
+    'darkorange'
+];

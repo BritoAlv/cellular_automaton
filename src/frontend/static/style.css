@@ -1,15 +1,28 @@
-/* Container settings */
-.grid-container {
-    display: grid;
-    /* grid-template-columns: repeat(3, 1fr);*/ /* 3 equal columns */
-    gap: 10px; /* Space between grid items */
-    padding: 20px;
+#battlefield-container {
+    display: flex;
+    flex: auto;
 }
 
-.grid-item {
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5em;
+#players-container{
+    margin: 1em;
+    padding: 1em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    width: 100px;
+}
+
+#canvas-container {
+    margin: 1em;
+}
+
+canvas {
+    border: 1px solid black;
+    display: block;
 }
