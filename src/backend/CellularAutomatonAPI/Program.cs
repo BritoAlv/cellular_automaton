@@ -1,5 +1,19 @@
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Policy", configurePolicy =>
+    {
+        // TODO: set defaults origins. 
+        configurePolicy.AllowAnyOrigin();
+        configurePolicy.AllowAnyHeader();
+        configurePolicy.AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("Policy");
 
 var api = new ApiMethods();
 
