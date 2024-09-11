@@ -13,28 +13,8 @@ if (width == null || height == null || armies == null || obstacleRate == null)
 const battlefieldDisplayer = new BattleFieldDisplayer();
 const requester = new Requester();
 
-let response = await requester.post(
-    `${URL}Start`,
-    {
-        "h": height,
-        "w": width,
-        "numberTeams": armies,
-        "p": obstacleRate
-    }
-);
-let matrix = response.cells;
-let status = response.percents;
-
-setInterval(async () => {
-    battlefieldDisplayer.display(matrix, status);
-    response = await requester.get(`${URL}UpdateCurrentState`);
-    matrix = response.cells;
-    status = response.percents;
-}, 1000);
-
-const restartButton = document.querySelector("#next-button");
-
-restartButton.addEventListener("click", async () => {
+let response, matrix, status;
+async function start() {
     response = await requester.post(
         `${URL}Start`,
         {
@@ -46,4 +26,17 @@ restartButton.addEventListener("click", async () => {
     );
     matrix = response.cells;
     status = response.percents;
-});
+};
+
+start();
+
+setInterval(async () => {
+    battlefieldDisplayer.display(matrix, status);
+    response = await requester.get(`${URL}UpdateCurrentState`);
+    matrix = response.cells;
+    status = response.percents;
+}, 1000);
+
+const restartButton = document.querySelector("#next-button");
+
+restartButton.addEventListener("click", start);
