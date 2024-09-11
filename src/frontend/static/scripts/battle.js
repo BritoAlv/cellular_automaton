@@ -14,7 +14,7 @@ const battlefieldDisplayer = new BattleFieldDisplayer();
 const requester = new Requester();
 
 let response = await requester.post(
-    `${URL}Start`, 
+    `${URL}Start`,
     {
         "h": height,
         "w": width,
@@ -23,7 +23,7 @@ let response = await requester.post(
     }
 );
 let matrix = response.cells;
-let status = response.percents; 
+let status = response.percents;
 
 setInterval(async () => {
     battlefieldDisplayer.display(matrix, status);
@@ -31,3 +31,19 @@ setInterval(async () => {
     matrix = response.cells;
     status = response.percents;
 }, 1000);
+
+const restartButton = document.querySelector("#next-button");
+
+restartButton.addEventListener("click", async () => {
+    response = await requester.post(
+        `${URL}Start`,
+        {
+            "h": height,
+            "w": width,
+            "numberTeams": armies,
+            "p": obstacleRate
+        }
+    );
+    matrix = response.cells;
+    status = response.percents;
+});
