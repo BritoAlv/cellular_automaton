@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimensions</title>
-    <link rel="icon" href="../static/images/sword.ico" type="image/x-icon"/>
+    <link rel="icon" href="../static/images/sword.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css">
     <script type="module" src="../static/scripts/dimensions.js"></script>
 </head>
+
 <body>
-    <h1>Battlefield Size</h1>
-    
-    <div>
-        <p>width</p>
-        <input type="number" id="width">
-    </div>
+    <div class="main-container">
+        <h1>Battlefield Size</h1>
 
-    <div>
-        <p>height</p>
-        <input type="number" id="height">
-    </div>
+        <div class="input-container">
+            <input type="number" placeholder="width" id="width" value="20" min="1" required>
+            <input type="number" placeholder="height" id="height" value="20" min="1" required>
+        </div>
 
-    <a href="./index" class="back-button">Back</a>
-    <a href="./armies" class="next-button">Next</a>
+        <div class="nav-container">
+            <a href="./index" class="back-button">Back</a>
+            <a href="./armies" class="next-button">Next</a>
+        </div>
+    </div>
 </body>
+
 </html>

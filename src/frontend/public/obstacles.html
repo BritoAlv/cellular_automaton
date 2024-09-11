@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obstacles</title>
-    <link rel="icon" href="../static/images/sword.ico" type="image/x-icon"/>
+    <link rel="icon" href="../static/images/sword.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css">
     <script type="module" src="../static/scripts/obstacles.js"></script>
 </head>
+
 <body>
-    <h1>Obstacle Rate</h1>
+    <div class="main-container">
+        <h1>Obstacle Rate</h1>
 
-    <input type="number" value="0.7" id="obstacle">
+        <div class="input-container">
+            <input type="number" value="0.7" id="obstacle" min="0" max="1" required>
+        </div>
 
-    <a href="./armies" class="back-button">Back</a>
-    <a href="./battle" class="next-button">Next</a>
+        <div class="nav-container">
+            <a href="./armies" class="back-button">Back</a>
+            <a href="./battle" class="next-button">Next</a>
+        </div>
+    </div>
 </body>
+
 </html>

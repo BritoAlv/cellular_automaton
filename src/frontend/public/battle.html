@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battlefield</title>
-    <link rel="icon" href="../static/images/sword.ico" type="image/x-icon"/>
+    <link rel="icon" href="../static/images/sword.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../static/style.css">
     <script type="module" src="../static/scripts/battle.js"></script>
 </head>
-<body>
-    <a href="./index" id="back-button">Home</a>
-    <a href="#" id="next-button">Restart</a>
 
-    <div id="battlefield-container">
-        <div id="players-container">
-            <ul id="players">
-            </ul>
+<body>
+    <div class="main-container">
+        <div class="nav-container">
+            <a href="./index" id="back-button">Home</a>
+            <a href="#" id="next-button">Restart</a>
         </div>
 
-        <div id="canvas-container">
-            <canvas id="canvas" width="1500" height="720"></canvas>
+        <div id="battlefield-container">
+            <div id="players-container">
+                <ul id="players">
+                </ul>
+            </div>
+
+            <div id="canvas-container">
+                <canvas id="canvas" width="1500" height="720"></canvas>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
