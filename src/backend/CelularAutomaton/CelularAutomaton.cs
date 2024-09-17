@@ -132,7 +132,7 @@
         the cell will be taken by a random team
         */
         var random_team = stronger[random.Next() % stronger.Count];
-        if (current_state.Ocuppied == false)
+        if (!current_state.Ocuppied)
         {
             /*
             take the color of one of the strongest team, 
