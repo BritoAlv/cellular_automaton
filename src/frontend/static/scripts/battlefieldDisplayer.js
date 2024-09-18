@@ -18,9 +18,9 @@ export class BattleFieldDisplayer {
     #displayMatrix(matrix) {
         if (matrix.length <= 0 || matrix[0].length <= 0)
             throw new Error("Height and width must be greater than zero");
-        
+
         const cellSize = 30;
-        
+
         // Width should be matrix[0].length and height should be matrix.length
         const width = matrix.length;
         const height = matrix[0].length;
@@ -29,8 +29,8 @@ export class BattleFieldDisplayer {
         canvas.width = width * cellSize;
         canvas.height = height * cellSize;
         const ctx = canvas.getContext('2d');
-        
-        const textColor = 'black'; 
+
+        const textColor = 'black';
         const fontSize = 13;
         ctx.font = `${fontSize}px Arial`;
         ctx.textAlign = 'center';
@@ -39,7 +39,7 @@ export class BattleFieldDisplayer {
         for (let i = 0; i < width; i++) {
             for (let j = 0; j < height; j++) {
                 const army = matrix[i][j].id;
-                const strength = `${matrix[i][j].value}`.slice(0, 4);
+                const strength = matrix[i][j].value == 0 ? 'X' : `${matrix[i][j].value}`.slice(0, 4);
 
                 const x = i * cellSize;
                 const y = j * cellSize;
@@ -49,15 +49,18 @@ export class BattleFieldDisplayer {
 
                 // Set text properties
                 ctx.fillStyle = textColor;
-                const text = `${strength}`;
-                ctx.fillText(text, x + cellSize / 2, y + cellSize / 2); // Draw text in the center of the cell
+
+                if (army != -1) {
+                    const text = `${strength}`;
+                    ctx.fillText(text, x + cellSize / 2, y + cellSize / 2); // Draw text in the center of the cell
+                }
             }
         }
     }
 
     #displayStatus(status) {
         const players = document.querySelector('#players');
-        
+
         players.innerHTML = "";
         for (let i = 0; i < status.length; i++) {
             const current = `${status[i]}`.slice(0, 4);
