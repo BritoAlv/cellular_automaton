@@ -58,3 +58,8 @@ Ahora si el único equipo fuerte que hay es precisamente el de la casilla entonc
 ### Notas
 
 Lo anterior son heuristicas que tratan de simular lo que pasaría en las batallas, durante el proceso de una batalla, durante el proceso de determinar estas observamos lo importante que es aumentar y disminuir los parámetros para que haya aleatoriedad, y evitar que el proceso siempre converja a un resultado específico y parezca determinista, contrario a la idea de los autómatas celulares.
+
+### Referencias
+Cellular Automata and Their Applications in Combat Modeling
+& Simulation, Deng Fang, Chen Jie, Chen Wenjie, Zhu Lin
+https://en.wikipedia.org/wiki/Cellular_automaton
